@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">FoodForGoodWiCHacks</string>
+    <string name="title_activity_post_catering">PostCatering</string>
 </resources>
