@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">FoodForGoodWiCHacks</string>
     <string name="title_activity_post_catering">PostCatering</string>
+    <string name="feedbacktype1">Event Type</string>
+    <string name="feedbacktype2">Family Gathering</string>
+    <string name="feedbacktype3">Baby Shower</string>
+    <string name="feedbacktype4">Birthday</string>
+    <string name="feedbacktype5">Aniversary</string>
 </resources>
