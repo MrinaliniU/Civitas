@@ -7,7 +7,8 @@
     <string name="feedbacktype4">Birthday</string>
     <string name="feedbacktype5">Aniversary</string>
     <string name="com_auth0_client_id">2Jruo8G38wgZzf7FHcghhfnAvWwnu4Ym</string>
-    <string name="com_auth0_domain">foodforgood.auth0.com</string>
+    <!--string name="com_auth0_domain">foodforgood.auth0.com</string-->
+    <string name="com_auth0_domain">com.example.foodforgoodwichacks://foodforgood.auth0.com/android/com.example.foodforgoodwichacks/callback</string>
     <string name="title_activity_login">Sign in</string>
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
