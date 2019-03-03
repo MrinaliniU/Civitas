@@ -24,4 +24,9 @@ public class Profile_Common extends AppCompatActivity {
         Intent intent = new Intent(this, PostCatering.class);
         startActivity(intent);
     }
+
+    public void dashBoard(View view){
+        Intent intent = new Intent(this, DashBoard.class);
+        startActivity(intent);
+    }
 }

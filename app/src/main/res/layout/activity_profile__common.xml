@@ -30,6 +30,7 @@
         android:layout_marginTop="46dp"
         android:layout_marginEnd="69dp"
         android:layout_marginRight="69dp"
+        android:onClick="dashBoard"
         android:text="Looking to cater"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

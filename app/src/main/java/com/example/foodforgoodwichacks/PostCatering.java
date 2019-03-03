@@ -32,6 +32,11 @@ public class PostCatering extends AppCompatActivity {
     EditText price;
     Spinner eventType;
     String spinnerdata;
+    /*
+        The actual data
+     */
+
+    String _name,_guests,_loc,_date,_price;
 
 
     @Override
@@ -52,9 +57,25 @@ public class PostCatering extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Log.i("tag","Submit Clicked");
-                new MyTask().executeOnExecutor(AsyncTask.SERIAL_EXECUTOR);
+                _price = price.getText().toString();
+                _date = date.getText().toString();
+                _loc = location.getText().toString();
+                _guests = numOfGuests.getText().toString();
+                _name = name.getText().toString();
+                price.setText("");
+                date.setText("");
+                location.setText("");
+                numOfGuests.setText("");
+                name.setText("");
+
+                //new MyTask().executeOnExecutor(AsyncTask.SERIAL_EXECUTOR);
             }
         });
+    }
+
+    public void cancel(View view){
+        Intent intent = new Intent(this, Profile_Common.class);
+        startActivity(intent);
     }
 
 
