@@ -8,31 +8,53 @@
 
     <Button
         android:id="@+id/lookForCaterers"
+        style="@android:style/Widget.Material.Button.Colored"
         android:layout_width="274dp"
-        android:layout_height="99dp"
+        android:layout_height="41dp"
         android:layout_marginStart="68dp"
         android:layout_marginLeft="68dp"
-        android:layout_marginTop="205dp"
+        android:layout_marginTop="248dp"
         android:layout_marginEnd="69dp"
         android:layout_marginRight="69dp"
+        android:background="@color/colorPrimary"
         android:onClick="lookForCaterer"
         android:text="Looking for Caterers"
+        android:typeface="normal"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/toCater"
+        style="@android:style/Widget.Material.Button.Colored"
         android:layout_width="274dp"
-        android:layout_height="99dp"
+        android:layout_height="49dp"
         android:layout_marginStart="68dp"
         android:layout_marginLeft="68dp"
-        android:layout_marginTop="46dp"
+        android:layout_marginTop="180dp"
         android:layout_marginEnd="69dp"
         android:layout_marginRight="69dp"
         android:text="Looking to cater"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lookForCaterers" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="136dp"
+        android:layout_height="79dp"
+        app:srcCompat="@drawable/LookForCaterers"
+        tools:layout_editor_absoluteX="137dp"
+        tools:layout_editor_absoluteY="147dp" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="118dp"
+        android:layout_height="102dp"
+        app:srcCompat="@drawable/LookToCater"
+        tools:layout_editor_absoluteX="149dp"
+        tools:layout_editor_absoluteY="350dp" />
 
 </android.support.constraint.ConstraintLayout>
