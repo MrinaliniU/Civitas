@@ -6,14 +6,22 @@ import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class DashBoard extends AppCompatActivity {
+    TextView event;
+    TextView loc;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dash_board);
+         event = findViewById(R.id.event);
+         loc = findViewById(R.id.location);
+        onClickRetrieveStudents();
+
+
     }
 
     public void lookForCaterer(View view){
@@ -22,7 +30,7 @@ public class DashBoard extends AppCompatActivity {
     }
 
 
-    public void onClickRetrieveStudents(View view) {
+    public void onClickRetrieveStudents() {
         // Retrieve student records
         String URL = "content://com.example.foodforgoodwichacks.JobContetentProvider";
 
@@ -31,11 +39,16 @@ public class DashBoard extends AppCompatActivity {
 
         if (c.moveToFirst()) {
             do{
-                Toast.makeText(this,
+
+                event.setText(c.getString(c.getColumnIndex(JobContetentProvider.Event)));
+                loc.setText(c.getString(c.getColumnIndex(JobContetentProvider.Location)));
+
+                /*Toast.makeText(this,
                         c.getString(c.getColumnIndex(JobContetentProvider._ID)) +
                                 ", " +  c.getString(c.getColumnIndex( JobContetentProvider.Location)) +
                                 ", " + c.getString(c.getColumnIndex( JobContetentProvider.Event)),
-                        Toast.LENGTH_SHORT).show();
+                        Toast.LENGTH_SHORT).show();*/
+
             } while (c.moveToNext());
         }
     }
@@ -45,3 +58,5 @@ public class DashBoard extends AppCompatActivity {
         startActivity(intent);
     }
 }
+
+
