@@ -35,7 +35,7 @@ public class DashBoard extends AppCompatActivity {
         String URL = "content://com.example.foodforgoodwichacks.JobContetentProvider";
 
         Uri job = Uri.parse(URL);
-        Cursor c = managedQuery(job, null, null, null, "event");
+        Cursor c = managedQuery(job, null, null, null, "_id");
 
         if (c.moveToFirst()) {
             do{
