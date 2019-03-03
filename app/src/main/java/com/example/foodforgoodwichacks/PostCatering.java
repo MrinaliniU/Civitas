@@ -32,11 +32,12 @@ public class PostCatering extends AppCompatActivity {
     EditText price;
     Spinner eventType;
     String spinnerdata;
+    EditText description;
     /*
         The actual data
      */
 
-    String _name,_guests,_loc,_date,_price;
+    String _name,_guests,_loc,_date,_price,_dec;
 
 
     @Override
@@ -49,8 +50,9 @@ public class PostCatering extends AppCompatActivity {
         date = findViewById(R.id.date);
         location = findViewById(R.id.Location);
         numOfGuests = findViewById(R.id.numOfGuests);
-        name = findViewById(R.id.name);
+        name = findViewById(R.id.organizer);
         eventType = findViewById(R.id.eventType);
+        description = findViewById(R.id.description);
         spinnerdata = eventType.getSelectedItem().toString();
 
         submit.setOnClickListener(new View.OnClickListener() {
@@ -62,11 +64,13 @@ public class PostCatering extends AppCompatActivity {
                 _loc = location.getText().toString();
                 _guests = numOfGuests.getText().toString();
                 _name = name.getText().toString();
+                _dec = description.getText().toString();
                 price.setText("");
                 date.setText("");
                 location.setText("");
                 numOfGuests.setText("");
                 name.setText("");
+                description.setText("");
 
                 //new MyTask().executeOnExecutor(AsyncTask.SERIAL_EXECUTOR);
             }
