@@ -5,19 +5,49 @@ import android.database.Cursor;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.ArrayList;
+
 
 public class DashBoard extends AppCompatActivity {
     TextView event;
     TextView loc;
 
+    private static RecyclerView.Adapter adapter;
+    private RecyclerView.LayoutManager layoutManager;
+    private static RecyclerView recyclerView;
+    private static ArrayList<DataModel> data;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dash_board);
-         event = findViewById(R.id.event);
+
+
+      /*  recyclerView = (RecyclerView) findViewById(R.id.my_recycler_view);
+        recyclerView.setHasFixedSize(true);
+
+        layoutManager = new LinearLayoutManager(this);
+        recyclerView.setLayoutManager(layoutManager);
+        recyclerView.setItemAnimator(new DefaultItemAnimator());
+        data = new ArrayList<DataModel>();
+
+        for (int i = 0; i < Jobs.nameArray.size(); i++) {
+            data.add(new DataModel(
+                    Jobs.nameArray.get(i),
+                    Jobs.versionArray[i],
+                    Jobs.id_[i]
+            ));
+        }*/
+
+
+        event = findViewById(R.id.event);
          loc = findViewById(R.id.location);
         onClickRetrieveStudents();
 
