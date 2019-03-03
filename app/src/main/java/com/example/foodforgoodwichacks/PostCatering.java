@@ -1,7 +1,10 @@
 package com.example.foodforgoodwichacks;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
+import android.database.Cursor;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -15,6 +18,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -54,7 +58,7 @@ public class PostCatering extends AppCompatActivity {
         eventType = findViewById(R.id.eventType);
         description = findViewById(R.id.description);
         spinnerdata = eventType.getSelectedItem().toString();
-
+        final Intent intent = new Intent(this, DashBoard.class);
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -71,17 +75,42 @@ public class PostCatering extends AppCompatActivity {
                 numOfGuests.setText("");
                 name.setText("");
                 description.setText("");
-
+                startActivity(intent);
                 //new MyTask().executeOnExecutor(AsyncTask.SERIAL_EXECUTOR);
+                ContentValues values = new ContentValues();
+                //values.put(JobContetentProvider.NAME, _name);
+                values.put(JobContetentProvider.Location, _loc);
+                values.put(JobContetentProvider.Event, spinnerdata);
+                Uri uri = getContentResolver().insert(
+                        JobContetentProvider.CONTENT_URI, values);
+                Toast.makeText(getBaseContext(),
+                        uri.toString(), Toast.LENGTH_LONG).show();
             }
         });
+    }
+
+    public void onClickRetrieveStudents(View view) {
+        // Retrieve student records
+        String URL = "content://com.example.foodforgoodwichacks.JobContetentProvider";
+
+        Uri job = Uri.parse(URL);
+        Cursor c = managedQuery(job, null, null, null, "event");
+
+        if (c.moveToFirst()) {
+            do{
+                Toast.makeText(this,
+                        c.getString(c.getColumnIndex(JobContetentProvider._ID)) +
+                                ", " +  c.getString(c.getColumnIndex( JobContetentProvider.Location)) +
+                                ", " + c.getString(c.getColumnIndex( JobContetentProvider.Event)),
+                        Toast.LENGTH_SHORT).show();
+            } while (c.moveToNext());
+        }
     }
 
     public void cancel(View view){
         Intent intent = new Intent(this, Profile_Common.class);
         startActivity(intent);
     }
-
 
     private class MyTask extends AsyncTask<Context, Integer, Long>{
         @Override
