@@ -82,6 +82,9 @@ public class PostCatering extends AppCompatActivity {
                 //values.put(JobContetentProvider.NAME, _name);
                 values.put(JobContetentProvider.Location, _loc);
                 values.put(JobContetentProvider.Event, spinnerdata);
+                values.put(JobContetentProvider.NAME, _name);
+                values.put(JobContetentProvider.price, _price);
+                values.put(JobContetentProvider.guests, _guests);
                 Uri uri = getContentResolver().insert(
                         JobContetentProvider.CONTENT_URI, values);
                 /*Toast.makeText(getBaseContext(),

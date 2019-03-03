@@ -18,6 +18,9 @@ import java.util.ArrayList;
 public class DashBoard extends AppCompatActivity {
     TextView event;
     TextView loc;
+    TextView name;
+    TextView price;
+    TextView guests;
 
     private static RecyclerView.Adapter adapter;
     private RecyclerView.LayoutManager layoutManager;
@@ -49,6 +52,9 @@ public class DashBoard extends AppCompatActivity {
 
         event = findViewById(R.id.event);
          loc = findViewById(R.id.location);
+         name = findViewById(R.id.name);
+        price = findViewById(R.id.price);
+        guests = findViewById(R.id.guests);
         onClickRetrieveStudents();
 
 
@@ -72,6 +78,9 @@ public class DashBoard extends AppCompatActivity {
 
                 event.setText(c.getString(c.getColumnIndex(JobContetentProvider.Event)));
                 loc.setText(c.getString(c.getColumnIndex(JobContetentProvider.Location)));
+                name.setText(c.getString(c.getColumnIndex(JobContetentProvider.NAME)));
+                price.setText(c.getString(c.getColumnIndex(JobContetentProvider.price)));
+                guests.setText(c.getString(c.getColumnIndex(JobContetentProvider.guests)));
 
                 /*Toast.makeText(this,
                         c.getString(c.getColumnIndex(JobContetentProvider._ID)) +

@@ -27,6 +27,8 @@ public class JobContetentProvider extends ContentProvider{
     static final String NAME = "name";
     static final String Event = "event";
     static final String Location = "location";
+    static final String price = "price";
+    static final String guests = "guest";
 
     private static HashMap<String, String> STUDENTS_PROJECTION_MAP;
 
@@ -49,7 +51,8 @@ public class JobContetentProvider extends ContentProvider{
     static final String JOB_TABLE_NAME = "job";
     static final int DATABASE_VERSION = 1;
     static final String CREATE_DB_TABLE =
-            " CREATE TABLE " + JOB_TABLE_NAME + " (_id INTEGER PRIMARY KEY AUTOINCREMENT, " + " event TEXT NOT NULL, " + " location TEXT NOT NULL);";
+            " CREATE TABLE " + JOB_TABLE_NAME + " (_id INTEGER PRIMARY KEY AUTOINCREMENT, " + " guest TEXT NOT NULL, " +
+                    "" + " price TEXT NOT NULL, " + " event TEXT NOT NULL, " + " name TEXT NOT NULL, " + " location TEXT NOT NULL);";
 
     /**
      * Helper class that actually creates and manages
