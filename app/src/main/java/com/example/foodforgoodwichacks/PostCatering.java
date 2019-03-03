@@ -57,11 +57,12 @@ public class PostCatering extends AppCompatActivity {
         name = findViewById(R.id.organizer);
         eventType = findViewById(R.id.eventType);
         description = findViewById(R.id.description);
-        spinnerdata = eventType.getSelectedItem().toString();
+
         final Intent intent = new Intent(this, DashBoard.class);
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                spinnerdata = eventType.getSelectedItem().toString();
                 Log.i("tag","Submit Clicked");
                 _price = price.getText().toString();
                 _date = date.getText().toString();
