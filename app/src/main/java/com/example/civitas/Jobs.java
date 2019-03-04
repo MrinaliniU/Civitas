@@ -1,10 +1,6 @@
-package com.example.foodforgoodwichacks;
+package com.example.civitas;
 
 
-import android.database.Cursor;
-import android.net.Uri;
-
-import java.util.ArrayList;
 import java.util.List;
 
 public class Jobs {

@@ -1,7 +1,6 @@
-package com.example.foodforgoodwichacks;
+package com.example.civitas;
 
 import android.content.Intent;
-import android.graphics.PostProcessor;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;

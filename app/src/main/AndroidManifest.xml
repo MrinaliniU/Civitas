@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.foodforgoodwichacks"
+    package="com.example.civitas"
     android:versionCode="1"
     android:versionName="one">
 
@@ -17,7 +17,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".LoginActivity"
+            android:name="com.example.civitas.LoginActivity"
             android:label="@string/title_activity_login">
             <!--<intent-filter>-->
                 <!--<action android:name="android.intent.action.MAIN" />-->
@@ -26,8 +26,8 @@
             <!--</intent-filter>-->
 
         </activity>
-        <activity android:name=".DashBoard" />
-        <activity android:name=".Profile_Common">
+        <activity android:name="com.example.civitas.DashBoard" />
+        <activity android:name="com.example.civitas.Profile_Common">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -36,12 +36,12 @@
 
         </activity>
         <activity
-            android:name=".PostCatering"
+            android:name="com.example.civitas.PostCatering"
             android:label="@string/app_name">
 
             </activity>
-        <provider android:name="JobContetentProvider"
-            android:authorities="com.example.foodforgoodwichacks.JobContetentProvider"/>
+        <provider android:name="com.example.civitas.JobContetentProvider"
+            android:authorities="com.example.civitas.JobContetentProvider"/>
     </application>
 
 </manifest>

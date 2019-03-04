@@ -1,4 +1,4 @@
-package com.example.foodforgoodwichacks;
+package com.example.civitas;
 
 import org.junit.Test;
 

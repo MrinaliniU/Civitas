@@ -1,4 +1,4 @@
-package com.example.foodforgoodwichacks;
+package com.example.civitas;
 
 import java.util.HashMap;
 

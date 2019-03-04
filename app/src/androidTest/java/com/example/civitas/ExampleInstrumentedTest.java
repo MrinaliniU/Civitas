@@ -1,4 +1,4 @@
-package com.example.foodforgoodwichacks;
+package com.example.civitas;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
